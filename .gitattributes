@@ -1,3 +1,4 @@
-# Gi? nguy?n byte c?c trang g?c
+# Giu nguyen byte cac trang goc
 pages/** -text
 *.png binary
+*.cmd text eol=crlf
