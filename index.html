@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ClinPharmAI Hub</title>
+<meta name="description" content="Cổng tra cứu tài liệu dược lâm sàng: tóm tắt guideline, thông tin thuốc, so sánh dược lý và thẩm định bằng chứng.">
+<meta name="theme-color" content="#12306b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<script>
+  // Áp theme trước khi vẽ để tránh nháy màu. Chỉ đọc tùy chọn giao diện.
+  (function () {
+    try {
+      var t = localStorage.getItem('cpai-hub:theme'); if (t) document.documentElement.setAttribute('data-theme', t);
+      var u = localStorage.getItem('cpai-hub:unit'); if (u) document.documentElement.setAttribute('data-unit', u);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua tới nội dung</a>
+
+<div class="app" id="app" data-sidebar="open" data-drawer="closed">
+  <aside class="sb" id="sidebar" aria-label="Điều hướng tài liệu">
+    <div class="sb-head">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div class="brand"><b>ClinPharmAI Hub</b><span id="unitName">Khoa Dược lâm sàng</span></div>
+      <button class="icon-btn sb-close" id="btnClose" type="button" aria-label="Đóng thanh điều hướng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="sb-search" role="search">
+      <label for="q" class="sr-only">Tìm tài liệu</label>
+      <svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Tìm thuốc, bệnh, tổ chức…" autocomplete="off" spellcheck="false" aria-controls="nav" aria-describedby="sCount">
+      <button class="s-clear" id="btnClear" type="button" aria-label="Xóa từ khóa" hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <kbd aria-hidden="true">/</kbd>
+      <div class="s-count" id="sCount" aria-live="polite"></div>
+    </div>
+
+    <nav class="sb-nav" id="nav" aria-label="Danh mục tài liệu"></nav>
+
+    <div class="sb-foot">
+      <div class="row">
+        <label id="lblTheme">Giao diện</label>
+        <div class="seg" role="group" aria-labelledby="lblTheme">
+          <button type="button" data-theme-set="light" aria-pressed="false">Sáng</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">Tối</button>
+          <button type="button" data-theme-set="auto" aria-pressed="false">Tự động</button>
+        </div>
+      </div>
+      <div class="row">
+        <label for="unit">Đơn vị</label>
+        <select id="unit">
+          <option value="">ClinPharmAI</option>
+          <option value="phuong-nam">BVĐK Phương Nam</option>
+          <option value="phuong-chau">Phương Châu</option>
+        </select>
+      </div>
+      <div class="ver" id="ver"></div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main class="main" id="main" tabindex="-1">
+    <header class="tb">
+      <button class="icon-btn" id="btnMenu" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="Ẩn/hiện thanh điều hướng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="crumb"><small id="crumbGroup">Trang chủ</small><b id="crumbTitle">Cổng tài liệu dược lâm sàng</b></div>
+      <div class="tb-actions" id="pageActions" hidden>
+        <button class="icon-btn" id="btnPrev" type="button" aria-label="Trang trước" title="Trang trước">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="icon-btn" id="btnNext" type="button" aria-label="Trang sau" title="Trang sau">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <button class="icon-btn hide-sm" id="btnReload" type="button" aria-label="Tải lại trang" title="Tải lại trang">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
+        </button>
+        <a class="icon-btn" id="btnOpen" href="#" target="_blank" rel="noopener" aria-label="Mở trong thẻ mới" title="Mở trong thẻ mới">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+      </div>
+      <span class="net" id="net" hidden>Ngoại tuyến</span>
+    </header>
+
+    <section class="home" id="home" aria-labelledby="crumbTitle"></section>
+
+    <section class="viewer" id="viewer" hidden>
+      <div class="loader" id="loader"><div><div class="spin"></div>Đang tải trang…</div></div>
+      <iframe id="frame" title="Nội dung tài liệu"></iframe>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/core.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

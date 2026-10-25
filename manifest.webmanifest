@@ -1,0 +1,17 @@
+{
+  "name": "ClinPharmAI Hub – Cổng tài liệu dược lâm sàng",
+  "short_name": "ClinPharmAI Hub",
+  "description": "Tra cứu tóm tắt guideline, thông tin thuốc, so sánh dược lý và thẩm định bằng chứng.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e9edf4",
+  "theme_color": "#12306b",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
