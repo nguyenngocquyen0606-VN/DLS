@@ -1,6 +1,6 @@
 # ClinPharmAI Hub – Cổng tài liệu dược lâm sàng
 
-Web app tĩnh (PWA, chạy offline) gom 20 trang tài liệu của Khoa Dược lâm sàng vào một giao diện có **thanh điều hướng bên trái**: tóm tắt guideline, thông tin thuốc, so sánh dược lý lâm sàng, thẩm định bằng chứng (EBM).
+Web app tĩnh (PWA, chạy offline) gom 22 trang tài liệu của Khoa Dược lâm sàng vào một giao diện có **thanh điều hướng bên trái**: tóm tắt guideline, thông tin thuốc, so sánh dược lý lâm sàng, thẩm định bằng chứng (EBM).
 
 ## Cách mở
 
@@ -19,7 +19,7 @@ Mở trực tiếp `index.html` bằng `file://` sẽ không tải được danh
 - Xem trang trong khung bên phải; nút trang trước/sau, tải lại, mở thẻ mới; đường dẫn `#/p/<id>` dùng được để chia sẻ và nút Back.
 - Trang chủ: thống kê, "Mở gần đây", thẻ tài liệu theo nhóm.
 - Giao diện sáng/tối/tự động; theme theo đơn vị (ClinPharmAI, BVĐK Phương Nam, Phương Châu) chỉ đổi màu nhấn.
-- Offline: service worker lưu sẵn khung ứng dụng và 20 trang; thư viện CDN của từng trang (Tailwind, Alpine, Chart.js…) được lưu khi mở trang đó trực tuyến lần đầu.
+- Offline: service worker lưu sẵn khung ứng dụng và 22 trang; thư viện CDN của từng trang (Tailwind, Alpine, Chart.js…) được lưu khi mở trang đó trực tuyến lần đầu.
 
 ## Cấu trúc
 
@@ -28,8 +28,8 @@ index.html              khung ứng dụng
 css/base.css            token màu, font Be Vietnam Pro, bố cục
 js/core.js              logic thuần (tìm kiếm, route, kiểm tra danh mục) – dùng chung cho Node test
 js/app.js               giao diện
-data/catalog.json       danh mục 20 trang (version, updated, source, status, records)
-pages/                  20 trang gốc – KHÔNG sửa trong cổng
+data/catalog.json       danh mục 22 trang (version, updated, source, status, records)
+pages/                  22 trang gốc – KHÔNG sửa trong cổng
 sw.js                   service worker (tăng CACHE_VERSION khi đổi tệp)
 tests/core.test.js      ca kiểm thử
 tools/validate.mjs      kiểm tra trước khi giao

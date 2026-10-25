@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-25",
-  "source": "1. Khoa Dược lâm sàng. Bộ tài liệu tóm tắt guideline, thông tin thuốc, so sánh dược lý và thẩm định EBM (20 trang HTML). Tài liệu nội bộ; 2026. Nguồn chuyên môn của từng trang được ghi trong chính trang đó.",
+  "source": "1. Khoa Dược lâm sàng. Bộ tài liệu tóm tắt guideline, thông tin thuốc, so sánh dược lý và thẩm định EBM (22 trang HTML). Tài liệu nội bộ; 2026. Nguồn chuyên môn của từng trang được ghi trong chính trang đó.",
   "status": "unverified",
   "note": "Danh mục điều hướng. title_goc chép nguyên văn từ thẻ <title> của trang. Cổng không sửa nội dung trang và chưa thẩm định lại nội dung chuyên môn.",
   "groups": [
@@ -21,6 +21,8 @@
     { "id": "dtd-2023-2026-bao-ve-co-quan", "group": "guideline", "file": "Guideline đái tháo đường 2023 2026.html", "title": "Đái tháo đường 2023–2026: bảo vệ cơ quan", "title_goc": "Bảo vệ cơ quan thay dần HbA1c trong guideline đái tháo đường 2023–2026", "org": null, "year": "2023–2026", "specialty": "Nội tiết", "tags": ["đái tháo đường", "HbA1c", "SGLT2", "GLP-1"] },
     { "id": "idsa-2026-gram-am", "group": "guideline", "file": "idsa-2026-gram-am-khang-thuoc.html", "title": "Vi khuẩn Gram âm kháng thuốc", "title_goc": "Hướng dẫn IDSA 2026: Phác đồ Kháng sinh Ưu tiên & Thay thế", "org": "IDSA", "year": "2026", "specialty": "Nhiễm khuẩn", "tags": ["gram âm", "kháng thuốc", "AMR", "kháng sinh"] },
     { "id": "ssti-s-aureus", "group": "guideline", "file": "nhiem-trung-da-mo-mem-staphylococcus-aureus.html", "title": "Nhiễm trùng da – mô mềm do S. aureus", "title_goc": "Infographic: Chẩn Đoán & Điều Trị Nhiễm Trùng Da do S. aureus (SSTIs)", "org": null, "year": null, "specialty": "Nhiễm khuẩn", "tags": ["SSTI", "Staphylococcus aureus", "MRSA", "da mô mềm"] },
+    { "id": "kdigo-2026-aki-akd", "group": "guideline", "file": "KDIGO-AKI-AKD-2026-Ch3-4-tom-tat.html", "title": "Tổn thương thận cấp (AKI/AKD) – chương 3–4", "title_goc": "KDIGO AKI/AKD (dự thảo 03/2026) – Chương 3 và 4: phòng ngừa, điều trị và AKI do thuốc", "org": "KDIGO", "year": "2026 (dự thảo)", "specialty": "Thận", "tags": ["AKI", "AKD", "tổn thương thận cấp", "AKI do thuốc", "NSAID", "aminoglycosid", "thuốc cản quang"] },
+    { "id": "eau-2026-uti", "group": "guideline", "file": "EAU-2026-UTI-3.3-3.9-tom-tat.html", "title": "Nhiễm khuẩn niệu khoa (mục 3.3–3.9)", "title_goc": "EAU 2026 – Nhiễm khuẩn niệu khoa (UTI 3.3–3.9)", "org": "EAU", "year": "2026", "specialty": "Nhiễm khuẩn", "tags": ["UTI", "nhiễm khuẩn tiết niệu", "viêm bàng quang", "cystitis", "pyelonephritis", "urosepsis", "catheter", "fosfomycin", "nitrofurantoin", "kháng sinh"] },
     { "id": "bexsero", "group": "thuoc", "file": "Bexsero_Tai_lieu_thong_tin_thuoc.html", "title": "Bexsero", "title_goc": "Bexsero – Tài liệu thông tin thuốc", "org": null, "year": null, "specialty": "Vắc xin", "tags": ["vắc xin", "não mô cầu", "meningococcal B"] },
     { "id": "lipitor", "group": "thuoc", "file": "Lipitor_Tai_lieu_thong_tin_thuoc.html", "title": "Lipitor (atorvastatin)", "title_goc": "Lipitor - Tài liệu thông tin thuốc", "org": null, "year": null, "specialty": "Tim mạch", "tags": ["atorvastatin", "statin", "lipid"] },
     { "id": "meronem-iv", "group": "thuoc", "file": "Meronem_IV_Tai_lieu_thong_tin_thuoc.html", "title": "Meronem IV (meropenem)", "title_goc": "Meronem IV - Tài liệu thông tin thuốc", "org": null, "year": null, "specialty": "Nhiễm khuẩn", "tags": ["meropenem", "carbapenem", "kháng sinh"] },

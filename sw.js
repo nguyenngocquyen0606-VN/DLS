@@ -1,6 +1,6 @@
 /* ClinPharmAI Hub – service worker.
    Tăng CACHE_VERSION mỗi lần đổi khung ứng dụng, danh mục hoặc nội dung trang. */
-var CACHE_VERSION = 'v1.0.0';
+var CACHE_VERSION = 'v1.1.0';
 var SHELL = 'hub-shell-' + CACHE_VERSION;
 var RUNTIME = 'hub-runtime-' + CACHE_VERSION;
 
